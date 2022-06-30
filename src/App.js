@@ -1,16 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Multiplier from './components/Multipier'
+import ButtonWithInternalState from './components/ButtonWithInternalState'
+import AsyncProcess from './components/AsyncProcess'
+import FetchingJokes from './components/FetchingJokes'
+import ContextUse from './components/ContextUse'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div>
+      <header>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
-          className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
@@ -18,6 +19,12 @@ function App() {
           Learn React
         </a>
       </header>
+      <Multiplier number={1} />
+      <Multiplier number={2} />
+      <ButtonWithInternalState title={"example"} />
+      <AsyncProcess />
+      <FetchingJokes />
+      <ContextUse />
     </div>
   );
 }
